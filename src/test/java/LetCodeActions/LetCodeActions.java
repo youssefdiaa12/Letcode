@@ -3,7 +3,12 @@ package LetCodeActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
+
+import java.time.Duration;
 
 public class LetCodeActions {
 
@@ -36,5 +41,11 @@ public class LetCodeActions {
          softAssert.assertTrue(element.isDisplayed(), "Element is not displayed after hover");
          softAssert.assertAll("Hover action failed");
      }
-
+     //explict wait
+    public void explicitWait(WebDriver driver,int time, ExpectedCondition<?> condition) {
+        // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
+        // wait.until(ExpectedConditions.visibilityOf(element));
+        WebDriverWait  wait = new WebDriverWait(driver, Duration.ofSeconds(time));
+        wait.until(condition);
+    }
 }
