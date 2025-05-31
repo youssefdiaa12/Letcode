@@ -2,8 +2,9 @@
 <suite name="MySuite">
     <test name="MyTest">
         <classes>
-            <class name="LetCode.Letcode"/>
-            <class name="LetCode.LetCodeHome"/>
+            <class name="LetCode.LetCodeTest"/>
+            <class name="LetCode.LetCodeButtonTest"/>
+            <class name="LetCode.LetCodeDropDownsTest"/>
         </classes>
     </test>
 </suite>
