@@ -26,9 +26,15 @@ public class LetCodeAlertTest extends Driver {
         super.setUp();
         super.navigateTo("https://letcode.in/alert");
         // Wait for the page to load and elements to be visible
-        Thread.sleep(1000);
+        Thread.sleep(7000);
     }
 
+/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
+    /**
+     * This test case clicks on the Confirm Alert button and verifies the alert text.
+     * It also verifies that the alert is accepted.
+     */
+/* <<<<<<<<<<  5fbafab8-1133-4696-90d6-c80a432a0a57  >>>>>>>>>>> */
     @Test(priority = 1, description = "Test LetCode DropDowns",groups = {"smoke"})
     public void TestConfirmAlert() {
         webElement = letCodeAlertPage.SimpleAlert(driver1);
