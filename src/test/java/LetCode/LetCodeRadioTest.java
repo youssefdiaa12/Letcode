@@ -45,6 +45,7 @@ public class LetCodeRadioTest extends Driver {
 
        Thread.sleep(2000);
         boolean isSelected = letCodeRadioPage.isCheckBoxSelected(driver1, ".checkbox input[type='checkbox']");
+        System.out.println(isSelected);
         // Assert that the checkbox is selected
         softAssert.assertTrue(isSelected, "The checkbox should be selected");
     }
