@@ -15,11 +15,12 @@ public class LetCodeRadioTest extends Driver {
     }
 
     @Test(priority = 1, description = "Test LetCode Radio Button")
-    public void testLetCodeRadio() {
+    public void testLetCodeRadio() throws InterruptedException {
         webElement = letCodeRadioPage.getRadio(driver1, "yes");
         letCodeActions.actionClick(webElement);
         boolean isSelected = letCodeRadioPage.isRadioSelected(driver1, "yes");
         softAssert.assertTrue(isSelected, "The radio button yes should be selected");
+        Thread.sleep(2000);
     }
 
     @Test(priority = 2, description = "Test LetCode Radio Button No")
@@ -39,8 +40,10 @@ public class LetCodeRadioTest extends Driver {
     }
 
     @Test(priority = 4, description = "Test LetCode Radio Button Remember Me Checkbox")
-    public void testLetCodeRadioClickCheckBox() {
+    public void testLetCodeRadioClickCheckBox() throws InterruptedException {
        letCodeRadioPage.clickCheckBox(driver1, "label.checkbox");
+
+       Thread.sleep(2000);
         boolean isSelected = letCodeRadioPage.isCheckBoxSelected(driver1, "label.checkbox");
         // Assert that the checkbox is selected
         softAssert.assertTrue(isSelected, "The checkbox should be selected");
