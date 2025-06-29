@@ -26,7 +26,7 @@ public class LetCodeAlertTest extends Driver {
         super.setUp();
         super.navigateTo("https://letcode.in/alert");
         // Wait for the page to load and elements to be visible
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     @Test(priority = 1, description = "Test LetCode DropDowns",groups = {"smoke"})
