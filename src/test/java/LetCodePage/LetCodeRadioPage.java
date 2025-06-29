@@ -9,7 +9,7 @@ public class LetCodeRadioPage {
 
     public WebElement getRadio(WebDriver driver, String value) {
 
-        return driver.findElement(By.className(value));
+        return driver.findElement(By.id(value));
     }
 
     public boolean isRadioSelected(WebDriver driver, String value) {
