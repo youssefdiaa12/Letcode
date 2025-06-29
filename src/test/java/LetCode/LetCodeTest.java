@@ -5,16 +5,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import LetCodeActions.LetCodeActions;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-
-@Test(groups = {"LetCode"})
+@Parameters("Browser")
 public class LetCodeTest extends Driver {
 
-
-    @Test(priority = 1,description = "Test LetCode Page",groups = {"smoke"})
-    public void testLetCodeEditPage() throws InterruptedException {
+    @Test(priority = 1,description = "Test LetCode Page")
+    public void testLetCodeEditPage()  {
         LetCodePage letCodePage = new LetCodePage(driver1);
         LetCodeActions letCodeActions = new LetCodeActions();
         letCodeActions.actionSendKeys(letCodePage.getFullName(), "ortonikc");

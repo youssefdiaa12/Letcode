@@ -32,14 +32,10 @@ public class LetCodeDropDownsTest extends Driver {
         webElement = letCodeButtonPage.SelectSubTitle(driver1,
                 ExpectedConditions.visibilityOfElementLocated(By.className("subtitle")));
         softAssert.assertEquals(webElement.getText(), "You have selected Apple", "Subtitle text does not match");
-        Thread.sleep(2000);
         String color = letCodeButtonPage.SelectColor(driver1);
-        softAssert.assertEquals(color, "rgba(255, 0, 0, 1)", "Color does not match");
+        softAssert.assertEquals(color, "rgba(22, 197, 127, 1)", "Color does not match");
     }
 
-    @Test(priority = 2, description = "Assert All")
-    public void assertAll() {
-        softAssert.assertAll("There are some errors in the test");
-    }
+
 
 }

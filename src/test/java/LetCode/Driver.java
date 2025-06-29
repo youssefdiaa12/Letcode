@@ -14,7 +14,7 @@ public class Driver {
     protected static SoftAssert softAssert;
 
     @BeforeSuite(alwaysRun = true)
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         // Initialize only once
         if (driver1 == null) {
             WebDriverManager.chromedriver().setup();
@@ -37,7 +37,7 @@ public class Driver {
         }
     }
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void tearDown() {
         if (driver1 != null) {
             driver1.quit();

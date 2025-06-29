@@ -1,10 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="MySuite">
     <test name="MyTest">
+        <parameter name="Browser" value="Chrome"/>
         <classes>
             <class name="LetCode.LetCodeTest"/>
             <class name="LetCode.LetCodeButtonTest"/>
             <class name="LetCode.LetCodeDropDownsTest"/>
+            <class name="LetCode.LetCodeAlertTest"/>
         </classes>
     </test>
+
 </suite>

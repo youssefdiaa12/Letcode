@@ -1,11 +1,9 @@
 package LetCodeActions;
 
-import org.openqa.selenium.Point;
-import org.openqa.selenium.Rectangle;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
@@ -35,12 +33,10 @@ public class LetCodeActions {
     }
 
     //make hover method
-    public void actionHover(WebElement element, WebDriver driver) {
+    public boolean actionHover(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
         action.moveToElement(element).perform();
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(element.isDisplayed(), "Element is not displayed after hover");
-        softAssert.assertAll("Hover action failed");
+       return  element.isDisplayed();
     }
 
     //explict wait
@@ -61,8 +57,12 @@ public class LetCodeActions {
     }
     public String actionHoldData(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
-        action.clickAndHold(element).pause(Duration.ofSeconds(5)).release().build().perform();
-        return  element.getText();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        action.clickAndHold(element).pause(Duration.ofSeconds(5)).build().perform();
+        String text= element.getText();
+        action.release(element).perform();
+        return  text;
     }
     public Select getSelect(WebElement element) {
         return new Select(element);
