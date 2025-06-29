@@ -52,7 +52,7 @@ public class LetCodeRadioTest extends Driver {
     }
 
 
-    //make soft assert alll
+    //make soft assert all
     @Test(priority = 5, description = "make soft assert all")
     public void makeSoftAssertAll() {
         softAssert.assertAll();
