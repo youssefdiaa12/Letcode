@@ -6,7 +6,7 @@
 
         <classes>
             <class name="LetCode.LetCodeAlertTest"/>
-
+            <class name="LetCode.LetCodeRadioTest"/>
         </classes>
     </test>
 </suite>

@@ -1,4 +1,5 @@
 package LetCode;
+import LetCodeActions.LetCodeActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +11,7 @@ import java.time.Duration;
 
 public class Driver {
     protected static WebDriver driver1;
-
+    protected static LetCodeActions letCodeActions;
     protected static SoftAssert softAssert;
 
     @BeforeSuite(alwaysRun = true)

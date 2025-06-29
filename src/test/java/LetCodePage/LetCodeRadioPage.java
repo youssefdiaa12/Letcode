@@ -1,0 +1,30 @@
+package LetCodePage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LetCodeRadioPage {
+
+
+    public WebElement getRadio(WebDriver driver, String value) {
+
+        return driver.findElement(By.className(value));
+    }
+
+    public boolean isRadioSelected(WebDriver driver, String value) {
+        WebElement radio = getRadio(driver, value);
+        return radio.isSelected();
+    }
+
+    public boolean isRadioEnabled(WebDriver driver, String value) {
+        WebElement radio = getRadio(driver, value);
+        radio.getAttribute("disabled");
+        return radio.isEnabled();
+    }
+
+    public void clickCheckBox(WebDriver driver, String value) {
+        WebElement radio = driver.findElement(By.className(value));
+        radio.click();
+    }
+}
