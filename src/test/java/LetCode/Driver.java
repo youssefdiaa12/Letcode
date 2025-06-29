@@ -27,6 +27,7 @@ public class Driver {
             driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         }
         softAssert = new SoftAssert();
+        letCodeActions = new LetCodeActions();
     }
 
 
