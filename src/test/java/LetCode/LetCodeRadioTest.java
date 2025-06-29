@@ -11,7 +11,7 @@ public class LetCodeRadioTest extends Driver {
 
     @BeforeClass
     public void setUp() {
-        navigateTo("https://letcode.in/radio-buttons");
+        navigateTo("https://letcode.in/radio");
     }
 
     @Test(priority = 1, description = "Test LetCode Radio Button")
