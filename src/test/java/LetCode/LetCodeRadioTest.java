@@ -25,7 +25,7 @@ public class LetCodeRadioTest extends Driver {
 
     @Test(priority = 2, description = "Test LetCode Radio Button No")
     public void testLetCodeRadioNo() {
-         letCodeRadioPage.getRadio(driver1, "no");
+         webElement = letCodeRadioPage.getRadio(driver1, "no");
         letCodeActions.actionClick(webElement);
         boolean isSelected = letCodeRadioPage.isRadioSelected(driver1, "no");
         softAssert.assertTrue(isSelected, "The radio button no should be selected");
