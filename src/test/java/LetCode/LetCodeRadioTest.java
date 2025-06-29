@@ -10,7 +10,8 @@ public class LetCodeRadioTest extends Driver {
     protected WebElement webElement;
 
     @BeforeClass
-    public void setUp() {
+    public void setUp() throws InterruptedException {
+        super.setUp();
         navigateTo("https://letcode.in/radio");
     }
 
@@ -41,10 +42,10 @@ public class LetCodeRadioTest extends Driver {
 
     @Test(priority = 4, description = "Test LetCode Radio Button Remember Me Checkbox")
     public void testLetCodeRadioClickCheckBox() throws InterruptedException {
-       letCodeRadioPage.clickCheckBox(driver1, ".checkbox input[type='checkbox']");
-
-       Thread.sleep(2000);
         boolean isSelected = letCodeRadioPage.isCheckBoxSelected(driver1, ".checkbox input[type='checkbox']");
+        if(!isSelected)
+            letCodeRadioPage.clickCheckBox(driver1, ".checkbox input[type='checkbox']");
+       Thread.sleep(2000);
         System.out.println("Checkbox selected: " + isSelected);
         // Assert that the checkbox is selected
         softAssert.assertTrue(isSelected, "The checkbox should be selected");
