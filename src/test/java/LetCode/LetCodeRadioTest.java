@@ -24,8 +24,8 @@ public class LetCodeRadioTest extends Driver {
 
     @Test(priority = 2, description = "Test LetCode Radio Button No")
     public void testLetCodeRadioNo() {
-         letCodeRadioPage.clickCheckBox(driver1, "no");
-        //letCodeActions.actionClick(webElement);
+         letCodeRadioPage.getRadio(driver1, "no");
+        letCodeActions.actionClick(webElement);
         boolean isSelected = letCodeRadioPage.isRadioSelected(driver1, "no");
         softAssert.assertTrue(isSelected, "The radio button should be selected");
     }
@@ -38,8 +38,16 @@ public class LetCodeRadioTest extends Driver {
         softAssert.assertTrue(!isEnabled, "The radio button should not be enabled");
     }
 
+    @Test(priority = 4, description = "Test LetCode Radio Button Remember Me Checkbox")
+    public void testLetCodeRadioClickCheckBox() {
+       letCodeRadioPage.clickCheckBox(driver1, "checkbox");
+        boolean isSelected = letCodeRadioPage.isRadioSelected(driver1, "checkbox");
+        softAssert.assertTrue(isSelected, "The checkbox should be selected");
+    }
+
+
     //make soft assert all
-    @Test(priority = 4, description = "make soft assert all")
+    @Test(priority = 5, description = "make soft assert all")
     public void makeSoftAssertAll() {
         softAssert.assertAll();
     }
