@@ -24,7 +24,7 @@ public class LetCodeRadioPage {
     }
 
     public void clickCheckBox(WebDriver driver, String value) {
-        WebElement radio = driver.findElement(By.className(value));
+        WebElement radio = driver.findElement(By.cssSelector(value));
         radio.click();
     }
 }
