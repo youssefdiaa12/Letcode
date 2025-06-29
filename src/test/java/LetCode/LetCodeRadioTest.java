@@ -12,7 +12,6 @@ public class LetCodeRadioTest extends Driver {
     @BeforeClass
     public void setUp() {
         navigateTo("https://letcode.in/radio-buttons");
-        letCodeActions.actionClick(webElement);
     }
 
     @Test(priority = 1, description = "Test LetCode Radio Button")
