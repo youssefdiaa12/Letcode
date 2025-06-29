@@ -1,6 +1,5 @@
 package LetCode;
 
-import LetCodeActions.LetCodeActions;
 import LetCodePage.LetCodeRadioPage;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
@@ -26,8 +25,8 @@ public class LetCodeRadioTest extends Driver {
 
     @Test(priority = 2, description = "Test LetCode Radio Button No")
     public void testLetCodeRadioNo() {
-        webElement = letCodeRadioPage.getRadio(driver1, "no");
-        letCodeActions.actionClick(webElement);
+         letCodeRadioPage.clickCheckBox(driver1, "no");
+        //letCodeActions.actionClick(webElement);
         boolean isSelected = letCodeRadioPage.isRadioSelected(driver1, "no");
         softAssert.assertTrue(isSelected, "The radio button should be selected");
     }
