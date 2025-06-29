@@ -41,10 +41,10 @@ public class LetCodeRadioTest extends Driver {
 
     @Test(priority = 4, description = "Test LetCode Radio Button Remember Me Checkbox")
     public void testLetCodeRadioClickCheckBox() throws InterruptedException {
-       letCodeRadioPage.clickCheckBox(driver1, "label.checkbox");
+       letCodeRadioPage.clickCheckBox(driver1, ".checkbox input[type='checkbox']");
 
        Thread.sleep(2000);
-        boolean isSelected = letCodeRadioPage.isCheckBoxSelected(driver1, "label.checkbox");
+        boolean isSelected = letCodeRadioPage.isCheckBoxSelected(driver1, ".checkbox input[type='checkbox']");
         // Assert that the checkbox is selected
         softAssert.assertTrue(isSelected, "The checkbox should be selected");
     }
