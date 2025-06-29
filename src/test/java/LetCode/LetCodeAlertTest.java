@@ -18,7 +18,6 @@ public class LetCodeAlertTest extends Driver {
     protected LetCodeAlertPage letCodeAlertPage;
     protected LetCodeActions letCodeActions ;
 
-
     @BeforeClass
     public void setUp() throws InterruptedException {
         // Initialize LetCodeAlertPage and LetCodeActions
@@ -27,7 +26,7 @@ public class LetCodeAlertTest extends Driver {
         super.setUp();
         super.navigateTo("https://letcode.in/alert");
         // Wait for the page to load and elements to be visible
-        Thread.sleep(5000);
+        Thread.sleep(3000);
     }
 
     @Test(priority = 1, description = "Test LetCode DropDowns",groups = {"smoke"})
