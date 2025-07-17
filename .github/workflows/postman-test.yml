@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master  # Change to your target branch
-#test1
+#test2
 jobs:
   postman-tests:
     runs-on: self-hosted
