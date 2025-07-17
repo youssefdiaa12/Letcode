@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master  # Change to your target branch
-
+#test2
 jobs:
   postman-tests:
     runs-on: self-hosted
@@ -16,13 +16,16 @@ jobs:
       - name: Run Postman Collection
         continue-on-error: true
         shell: cmd
-        working-directory: C:\Users\ysoltan\IdeaProjects\Letcode
         run: |
-          newman run Energy360Apis.postman_collection.json -e 360.postman_environment.json --insecure --folder "Authorization" -r html --reporter-html-export newman-report.html --verbose
-
+          newman run Energy360Apis.postman_collection.json ^
+            -e 360.postman_environment.json ^
+            --folder "Authorization" ^
+            --insecure ^
+            --timeout-request 10000 ^ 
+             -r html ^
+            --reporter-html-export newman-report.html
       - name: Upload HTML Report
         if: always()
-
         uses: actions/upload-artifact@v4
         with:
           name: postman-html-report
