@@ -5,9 +5,6 @@ import org.openqa.selenium.WebElement;
 
 
 public class LetCodeAlertPage {
-    private static WebElement webElement;
-
-
 
     public  WebElement SimpleAlert(WebDriver driver) {
          return driver.findElement(By.id("accept"));
@@ -18,7 +15,7 @@ public class LetCodeAlertPage {
     }
     public  WebElement PromptAlert(WebDriver driver) {
        return driver.findElement(By.id("prompt"));
-
+       //test github action
     }
     public  WebElement ModernAlert(WebDriver driver) {
         return driver.findElement(By.id("modern"));
