@@ -33,7 +33,8 @@ jobs:
           overwrite: 'true'
 
       - name: Send Email with Report
-        uses: dawidd6/action-send-mail@v3
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v4
         with:
           server_address: ${{ secrets.EMAIL }}
           server_port: ${{ secrets.EMAILPORT }}
