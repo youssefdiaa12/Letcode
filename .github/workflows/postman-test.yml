@@ -29,13 +29,13 @@ jobs:
         continue-on-error: true
         uses: dawidd6/action-send-mail@v4
         with:
-          server_address: ${{ secrets.EMAIL }}
+          server_address: ${{ secrets.EMAILSMTP }}
           server_port: ${{ secrets.EMAILPORT }}
           username: ${{ secrets.EMAIL }}
           password: ${{ secrets.PASSWORD }}
           subject: Postman Test Report
           to: ${{ secrets.EMAILTO }}
-          from: GitHub Actions <${{ secrets.EMAIL }}>
+          from: ${{ secrets.EMAIL }}
           body: |
             Hello,
 
