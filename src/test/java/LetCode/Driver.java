@@ -7,7 +7,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Driver {
     protected static WebDriver driver1;
@@ -48,6 +53,24 @@ public class Driver {
         driver1 = null;
     }
 
+    public static Object[][] readCSVData(String filePath) throws IOException {
+        List<Object[]> data = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        String line;
+        boolean isFirstLine = true;
+
+        while ((line = reader.readLine()) != null) {
+            if (isFirstLine) {
+                isFirstLine = false; // Skip header
+                continue;
+            }
+            String[] fields = line.split(",");
+            data.add(fields);
+        }
+
+        reader.close();
+        return data.toArray(new Object[0][]);
+    }
 //@BeforeMethod
 //    public void beforeMethod() {
 //        // This method can be used to reset the state before each test method if needed

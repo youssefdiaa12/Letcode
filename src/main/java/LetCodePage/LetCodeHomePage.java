@@ -1,11 +1,11 @@
 package LetCodePage;
 
-import LetCode.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LetCodeHomePage extends Driver {
-  public   WebElement returnPageObject() {
+public class LetCodeHomePage  {
+  public   WebElement returnPageObject(WebDriver driver1) {
         return driver1.findElement(By.linkText("Page Object Model"));
     }
 }

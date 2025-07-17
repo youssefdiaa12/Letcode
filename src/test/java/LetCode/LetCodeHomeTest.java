@@ -16,7 +16,7 @@ public class LetCodeHomeTest extends Driver {
 
     @Test
     public void testLetCodePage() {
-        WebElement webElement = letCodePageMain.returnPageObject();
+        WebElement webElement = letCodePageMain.returnPageObject(driver1);
         letCodeActions.actionClick(webElement);
     }
 }

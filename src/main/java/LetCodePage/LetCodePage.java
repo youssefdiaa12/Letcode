@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class LetCodePage {
     private static WebElement webElement;
-    private static WebDriver driver;
+    public static WebDriver driver;
 
    public LetCodePage(WebDriver driver1){
          webElement=null;

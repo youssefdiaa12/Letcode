@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 public class LetCodeDropDownsTest extends Driver {
     protected WebElement webElement;
     protected LetCodeDropDownPage letCodeButtonPage = new LetCodeDropDownPage();

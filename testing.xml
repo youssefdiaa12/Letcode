@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="MySuite">
-    <test name="MyTest">
+    <test name="test">
         <parameter name="Browser" value="Chrome"/>
 
         <classes>
