@@ -14,13 +14,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Postman Collection
+        shell: cmd
         run: |
-          newman run Energy360Apis.postman_collection.json \
-            -e 360.postman_environment.json \
-            --folder "Authorization" \
-            --insecure \
-            --timeout-request 10000 \ 
-             -r html \
+          newman run Energy360Apis.postman_collection.json ^
+            -e 360.postman_environment.json ^
+            --folder "Authorization" ^
+            --insecure ^
+            --timeout-request 10000 ^ 
+             -r html ^
             --reporter-html-export newman-report.html
 
       - name: Upload HTML Report
