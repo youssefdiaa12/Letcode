@@ -25,8 +25,8 @@ jobs:
 
       - name: Run Postman Collection
         run: |
-          newman run your_collection.postman_collection.json \
-            -e your_environment.postman_environment.json \
+          newman run Energy360Apis.postman_collection.json \
+            -e 360.postman_environment.json \
             -r html \
             --reporter-html-export newman-report.html
 
