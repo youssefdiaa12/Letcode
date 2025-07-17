@@ -27,6 +27,8 @@ jobs:
         run: |
           newman run Energy360Apis.postman_collection.json \
             -e 360.postman_environment.json \
+            --folder "Authorization" \
+            --insecure \
             -r html \
             --reporter-html-export newman-report.html
 
