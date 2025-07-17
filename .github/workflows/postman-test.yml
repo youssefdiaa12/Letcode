@@ -31,3 +31,22 @@ jobs:
           name: postman-html-report
           path: C:/Users/ysoltan/IdeaProjects/Letcode/newman-report.html
           overwrite: 'true'
+
+      - name: Send Email with Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.EMAIL }}
+          server_port: ${{ secrets.EMAILPORT }}
+          username: ${{ secrets.EMAIL }}
+          password: ${{ secrets.PASSWORD }}
+          subject: Postman Test Report
+          to: ${{ secrets.EMAILTO }}
+          from: GitHub Actions <${{ secrets.EMAIL }}>
+          body: |
+            Hello,
+
+            The latest Postman test run has completed. Please find the attached HTML report.
+
+            Regards,
+            GitHub Actions
+          attachments: newman-report.html
