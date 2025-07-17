@@ -27,6 +27,8 @@ jobs:
 
       - name: Send Email with Report
         continue-on-error: true
+        env:
+          NODE_TLS_REJECT_UNAUTHORIZED: 0
         uses: dawidd6/action-send-mail@v4
         with:
           server_address: smtp.gmail.com
