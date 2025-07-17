@@ -29,7 +29,8 @@ jobs:
             -e 360.postman_environment.json \
             --folder "Authorization" \
             --insecure \
-            -r html \
+            --timeout-request 10000 \ 
+             -r html \
             --reporter-html-export newman-report.html
 
       - name: Upload HTML Report
