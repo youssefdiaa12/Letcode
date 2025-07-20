@@ -49,5 +49,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: postman-html-report
-          path: C:/Users/ysoltan/IdeaProjects/Letcode/newman-report.html
+          path: C:\Users\ysoltan\actions-runner\github-self-host-runner\Letcode\Letcode\newman-report.html
           overwrite: 'true'
