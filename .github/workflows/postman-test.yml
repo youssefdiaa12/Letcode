@@ -51,4 +51,3 @@ jobs:
           name: postman-html-report
           path: C:\Users\ysoltan\actions-runner\github-self-host-runner\Letcode\Letcode\newman-report.html
           overwrite: 'true'
-          #tt
