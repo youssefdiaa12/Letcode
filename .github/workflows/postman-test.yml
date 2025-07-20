@@ -21,7 +21,6 @@ jobs:
             -e 360.postman_environment.json ^
             --folder "Authorization" ^
             --insecure ^
-            --timeout-request 10000 ^ 
              -r html ^
             --reporter-html-export newman-report.html
 
@@ -40,7 +39,6 @@ jobs:
           from: ${{ secrets.EMAIL }}
           body: |
             Hello,
-
             The latest Postman test run has completed. Please find the attached HTML report.
 
             Regards,
