@@ -2,7 +2,12 @@
 <suite name="MySuite">
     <test name="test">
         <parameter name="Browser" value="Chrome"/>
-
+        <groups>
+            <run>
+                <include name="regression"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
         <classes>
             <class name="LetCode.LetCodeTest"/>
             <class name="LetCode.LetCodeButtonTest"/>
