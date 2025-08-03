@@ -1,0 +1,21 @@
+ Azure devops modules:
+
+Board:
+1. Work items:
+there are 4 methodologies to work with work items:
+1. scrum
+2. basic
+3. agile
+4. CMMI
+2. Boards:
+in the boards you see visualize the work items and the sprints progress.
+
+backlog: is prioritized list of work items to be done, the work items are added to the backlog by the scrum master
+and the scrum master adds the work items to the backlog.
+it consists of epics, stories and tasks.
+3. sprints:
+sprints are the time period during which the team works on the work items in the backlog.
+4. Delivery plan:
+it is a list of work items to be delivered during the sprint.
+5. Burndown chart:
+it is a chart that shows the progress of the work items in the backlog.
