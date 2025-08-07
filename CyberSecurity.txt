@@ -1,0 +1,90 @@
+mklink /D "C:\xampp\htdocs\myproject" "C:\Users\Youssef Dieaa\PhpstormProjects\Redniux"
+
+
+to make connection between phpstorm project and xampp
+
+
+how to show tables
+Open XAMPP Control Panel
+
+Make sure MySQL is started
+
+Click the Shell button in XAMPP (or open Command Prompt)
+
+Enter:
+
+bash
+Copy
+Edit
+mysql -u root -p
+By default, XAMPP sets no password for root, so just press Enter
+
+
+
+sql injection example:
+What Does a Prepared Statement Do?
+A prepared statement is a secure way to execute SQL queries that include user input.
+
+✅ Why use it?
+Prevents SQL Injection
+
+Without it, a hacker can inject malicious SQL via forms (e.g., DROP TABLE).
+
+Prepared statements separate the SQL logic from user input.
+
+Faster for repeated queries
+
+SQL is parsed once, and variables are sent later — more efficient for loops.
+
+ Example: Without Prepared Statement  (Vulnerable)
+php
+Copy
+Edit
+$sql = "INSERT INTO users (name) VALUES ('$username')";
+If someone enters:
+
+vbnet
+Copy
+Edit
+Youssef'); DROP TABLE users; --
+It becomes:
+
+sql
+Copy
+Edit
+INSERT INTO users (name) VALUES ('Youssef'); DROP TABLE users; --');
+
+This could delete the table.
+
+
+   ----> website for solving hacking
+
+
+C:\Users\Youssef Dieaa\AppData\Local\Programs\BurpSuitePro
+
+
+
+you can send to the request in the trackingId ---> || pgsleep() 
+
+
+arjun ----> tool tries to find the params in the link
+param miner extension
+
+arjun, python sqlmap.py -u " " --data "id=1" --dumb-all
+
+
+Cross-site request forgery (CSRF)
+
+
+
+
+in case you faced CSRF ----- Options to do 
+
+1. remove CSRF
+
+2. Give same value length of chars
+
+3. change method from POST to GET
+
+
+XSS Payloads:
