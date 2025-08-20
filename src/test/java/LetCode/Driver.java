@@ -27,12 +27,12 @@ public class Driver {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
             driver1 = new ChromeDriver(options);
-            driver1.get("https://letcode.in/edit");
+            driver1.get("https://letcode.in");
             driver1.manage().window().maximize();
             driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         }
         softAssert = new SoftAssert();
-        letCodeActions = new LetCodeActions();
+        letCodeActions = new LetCodeActions(driver1);
     }
 
 

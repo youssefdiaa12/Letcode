@@ -6,12 +6,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class LetCodeRadioTest extends Driver {
-    protected LetCodeRadioPage letCodeRadioPage = new LetCodeRadioPage();
+    protected LetCodeRadioPage letCodeRadioPage;
     protected WebElement webElement;
 
     @BeforeClass
     public void setUp() throws InterruptedException {
         super.setUp();
+        letCodeRadioPage = new LetCodeRadioPage();
         navigateTo("https://letcode.in/radio");
     }
 

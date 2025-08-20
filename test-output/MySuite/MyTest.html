@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>TestNG:  MyTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>MyTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jun 21 18:09:24 EEST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>16 seconds (16838 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='LetCode.LetCodeButtonTest.testHoldButton()'><b>testHoldButton</b><br>Test class: LetCode.LetCodeButtonTest<br>Test method: Test LetCode Hold Button </td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;YOUSEEF_DIEAA&apos;, ip: &apos;192.168.100.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20776dfa8cfcb03bc879ab8681795569, getElementText {id=f.6549CC12086B44CFD06917A53067D0D3.d.6A04E3F07D027EF8A702046B73DD156C.e.132}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\YOUSSE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50772}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50772/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (20776dfa8cfcb03bc879ab8681795569)] -&gt; xpath: //*[@id=&quot;isDisabled&quot;]/div/h2]
+Session ID: 20776dfa8cfcb03bc879ab8681795569
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:201)
+	at LetCodeActions.LetCodeActions.actionHoldData(LetCodeActions.java:63)
+	at LetCode.LetCodeButtonTest.testHoldButton(LetCodeButtonTest.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at runneer.main(runneer.java:7)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace481525476", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace481525476'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
+System info: host: &apos;YOUSEEF_DIEAA&apos;, ip: &apos;192.168.100.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20776dfa8cfcb03bc879ab8681795569, getElementText {id=f.6549CC12086B44CFD06917A53067D0D3.d.6A04E3F07D027EF8A702046B73DD156C.e.132}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\YOUSSE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50772}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50772/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (20776dfa8cfcb03bc879ab8681795569)] -&gt; xpath: //*[@id=&quot;isDisabled&quot;]/div/h2]
+Session ID: 20776dfa8cfcb03bc879ab8681795569
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:201)
+	at LetCodeActions.LetCodeActions.actionHoldData(LetCodeActions.java:63)
+	at LetCode.LetCodeButtonTest.testHoldButton(LetCodeButtonTest.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at runneer.main(runneer.java:7)
+</pre></div></td>
+<td>5</td>
+<td>LetCode.LetCodeButtonTest@6b0c2d26</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='LetCode.LetCodeTest.testLetCodeEditPage()'><b>testLetCodeEditPage</b><br>Test class: LetCode.LetCodeTest<br>Test method: Test LetCode Page</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeTest@3e77a1ed</td></tr>
+<tr>
+<td title='LetCode.LetCodeAlertTest.TestConfirmAlert()'><b>TestConfirmAlert</b><br>Test class: LetCode.LetCodeAlertTest<br>Test method: Test LetCode DropDowns</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeAlertTest@6e38921c</td></tr>
+<tr>
+<td title='LetCode.LetCodeButtonTest.testDisabledButton()'><b>testDisabledButton</b><br>Test class: LetCode.LetCodeButtonTest<br>Test method: Test LetCode Button Disabled</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeButtonTest@6b0c2d26</td></tr>
+<tr>
+<td title='LetCode.LetCodeButtonTest.testLocationButton()'><b>testLocationButton</b><br>Test class: LetCode.LetCodeButtonTest<br>Test method: Test LetCode Location Button</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeButtonTest@6b0c2d26</td></tr>
+<tr>
+<td title='LetCode.LetCodeButtonTest.testLetCodeButton()'><b>testLetCodeButton</b><br>Test class: LetCode.LetCodeButtonTest<br>Test method: Test LetCode Button Page</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeButtonTest@6b0c2d26</td></tr>
+<tr>
+<td title='LetCode.LetCodeDropDownsTest.testLetCodeDropDowns()'><b>testLetCodeDropDowns</b><br>Test class: LetCode.LetCodeDropDownsTest<br>Test method: Test LetCode DropDowns</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeDropDownsTest@641147d0</td></tr>
+<tr>
+<td title='LetCode.LetCodeButtonTest.testColor()'><b>testColor</b><br>Test class: LetCode.LetCodeButtonTest<br>Test method: Test LetCode Button Color</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeButtonTest@6b0c2d26</td></tr>
+<tr>
+<td title='LetCode.LetCodeAlertTest.TestPromptAlert()'><b>TestPromptAlert</b><br>Test class: LetCode.LetCodeAlertTest<br>Test method: Test LetCode Prompt Alert</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeAlertTest@6e38921c</td></tr>
+<tr>
+<td title='LetCode.LetCodeAlertTest.assertAll()'><b>assertAll</b><br>Test class: LetCode.LetCodeAlertTest<br>Test method: Assert All</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeAlertTest@6e38921c</td></tr>
+<tr>
+<td title='LetCode.LetCodeAlertTest.TestModernAlert()'><b>TestModernAlert</b><br>Test class: LetCode.LetCodeAlertTest<br>Test method: Test LetCode Modern Alert</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeAlertTest@6e38921c</td></tr>
+<tr>
+<td title='LetCode.LetCodeButtonTest.testHeightWidthButton()'><b>testHeightWidthButton</b><br>Test class: LetCode.LetCodeButtonTest<br>Test method: Test LetCode Button Height and Width</td>
+<td></td>
+<td>0</td>
+<td>LetCode.LetCodeButtonTest@6b0c2d26</td></tr>
+</table><p>
+</body>
+</html>

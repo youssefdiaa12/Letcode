@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MySuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="MyTest(failed)">
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="LetCode.LetCodeButtonTest">
+        <methods>
+          <include name="testLetCodeButtonPage"/>
+          <include name="testHoldButton"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- LetCode.LetCodeButtonTest -->
+    </classes>
+  </test> <!-- MyTest(failed) -->
+</suite> <!-- Failed suite [MySuite] -->

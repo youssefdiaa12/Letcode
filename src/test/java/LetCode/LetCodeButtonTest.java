@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 public class LetCodeButtonTest extends Driver {
     protected WebElement webElement;
     protected LetCodeButtonPage letCodeButtonPage = new LetCodeButtonPage();
-    protected LetCodeActions letCodeActions = new LetCodeActions();
 
     @BeforeClass
     public void testLetCodeButtonPage()  {

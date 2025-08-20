@@ -22,7 +22,6 @@ public class LetCodeAlertTest extends Driver {
     public void setUp() throws InterruptedException {
         // Initialize LetCodeAlertPage and LetCodeActions
         letCodeAlertPage = new LetCodeAlertPage();
-        letCodeActions = new LetCodeActions();
         super.setUp();
         super.navigateTo("https://letcode.in/alert");
         // Wait for the page to load and elements to be visible

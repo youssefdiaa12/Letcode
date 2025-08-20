@@ -5,8 +5,8 @@
     <test  name="regression">
 
         <classes>
-            <class name="LetCode.LetCodeAlertTest"/>
-            <class name="LetCode.LetCodeRadioTest"/>
+            <class name="LetCode.LetCodeHomeTest"/>
+            <class name="LetCode.LetCodeElementTest"/>
         </classes>
     </test>
 </suite>

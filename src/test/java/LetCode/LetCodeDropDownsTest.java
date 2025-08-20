@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 public class LetCodeDropDownsTest extends Driver {
     protected WebElement webElement;
     protected LetCodeDropDownPage letCodeButtonPage = new LetCodeDropDownPage();
-    protected LetCodeActions letCodeActions = new LetCodeActions();
 
     @BeforeClass
     public void setUp() {

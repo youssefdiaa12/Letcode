@@ -15,7 +15,6 @@ public class LetCodeTest extends Driver {
     @Test(priority = 1,description = "Test LetCode Page")
     public void testLetCodeEditPage()  {
         LetCodePage letCodePage = new LetCodePage(driver1);
-        LetCodeActions letCodeActions = new LetCodeActions();
         letCodeActions.actionSendKeys(letCodePage.getFullName(), "ortonikc");
 
         letCodeActions.actionSendKeys(letCodePage.getJoin(), Keys.TAB);
