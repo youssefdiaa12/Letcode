@@ -4,15 +4,18 @@ import LetCodeActions.LetCodeActions;
 import LetCodePage.LetCodeHomePage;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LetCodeHomeTest extends Driver {
-    protected LetCodeHomePage letCodePageMain= new LetCodeHomePage();
+    protected LetCodeHomePage letCodePageMain;
 
     @BeforeClass(description = "Navigate to LetCode Home Page")
-    public void testLetCodeHomePage() throws InterruptedException {
-        super.setUp();
-        navigateTo("https://letcode.in/test");
+    @Parameters({"Browser", "URL"})
+    public void testLetCodeHomePage(String Browser, String URL) throws InterruptedException {
+        super.setUp(Browser,URL);
+        navigateTo(URL);
+        letCodePageMain = new LetCodeHomePage();
     }
 
     @Test

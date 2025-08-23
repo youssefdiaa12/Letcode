@@ -8,32 +8,33 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 @Test(groups = {"LetCode"})
-
+@Listeners(TestListener.class)
 public class LetCodeAlertTest extends Driver {
     protected WebElement webElement;
     protected LetCodeAlertPage letCodeAlertPage;
     protected LetCodeActions letCodeActions ;
 
     @BeforeClass
-    public void setUp() throws InterruptedException {
+    @Parameters({"Browser","URL"})
+    public void setUp(String Browser,String URL) throws InterruptedException {
         // Initialize LetCodeAlertPage and LetCodeActions
         letCodeAlertPage = new LetCodeAlertPage();
-        super.setUp();
+        super.setUp(Browser,URL);
         super.navigateTo("https://letcode.in/alert");
         // Wait for the page to load and elements to be visible
         Thread.sleep(7000);
     }
 
-/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
     /**
      * This test case clicks on the Confirm Alert button and verifies the alert text.
      * It also verifies that the alert is accepted.
      */
-/* <<<<<<<<<<  5fbafab8-1133-4696-90d6-c80a432a0a57  >>>>>>>>>>> */
     @Test(priority = 1, description = "Test LetCode DropDowns",groups = {"smoke"})
     public void TestConfirmAlert() {
         webElement = letCodeAlertPage.SimpleAlert(driver1);

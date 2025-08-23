@@ -1,4 +1,5 @@
 package LetCode;
+
 import LetCodeActions.LetCodeActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -19,22 +20,26 @@ public class Driver {
     protected static LetCodeActions letCodeActions;
     protected static SoftAssert softAssert;
 
-    @BeforeSuite(alwaysRun = true)
-    public void setUp() throws InterruptedException {
+    public void setUp(String Browser, String URL) throws InterruptedException {
         // Initialize only once
         if (driver1 == null) {
-            WebDriverManager.chromedriver().setup();
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--remote-allow-origins=*");
-            driver1 = new ChromeDriver(options);
-            driver1.get("https://letcode.in");
-            driver1.manage().window().maximize();
-            driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+            if (Browser.equals("Chrome")) {
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+                driver1 = new ChromeDriver(options);
+                driver1.get(URL);
+                driver1.manage().window().maximize();
+                driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+            }
         }
         softAssert = new SoftAssert();
         letCodeActions = new LetCodeActions(driver1);
     }
 
+    public static WebDriver getDriver() {
+        return driver1;
+    }
 
     public void navigateTo(String url) {
         if (driver1 != null) {

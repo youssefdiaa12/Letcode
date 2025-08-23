@@ -3,15 +3,16 @@ package LetCode;
 import LetCodePage.LetCodeRadioPage;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LetCodeRadioTest extends Driver {
     protected LetCodeRadioPage letCodeRadioPage;
     protected WebElement webElement;
-
+@Parameters({"Browser","URL"})
     @BeforeClass
-    public void setUp() throws InterruptedException {
-        super.setUp();
+    public void setUp(String Browser, String URL) throws InterruptedException {
+        super.setUp(Browser,URL);
         letCodeRadioPage = new LetCodeRadioPage();
         navigateTo("https://letcode.in/radio");
     }

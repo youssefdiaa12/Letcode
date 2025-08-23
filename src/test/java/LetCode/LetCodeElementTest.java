@@ -3,6 +3,7 @@ package LetCode;
 import LetCodePage.LetCodeElementPage;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LetCodeElementTest extends Driver {
@@ -10,8 +11,9 @@ public class LetCodeElementTest extends Driver {
     protected WebElement webElement;
 
     @BeforeClass
-    public void setUp() throws InterruptedException {
-        super.setUp();
+    @Parameters({"Browser", "URL"})
+    public void setUp(String Browser, String URL) throws InterruptedException {
+        super.setUp(Browser,URL);
         letCodeElementPage = new LetCodeElementPage();
         navigateTo("https://letcode.in/elements");
     }

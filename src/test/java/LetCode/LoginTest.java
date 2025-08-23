@@ -11,8 +11,9 @@ public class LoginTest extends Driver {
     LoginPage loginPage;
 
     @BeforeMethod
-    public void setUp() throws InterruptedException {
-        super.setUp();
+    @Parameters({"Browser", "URL"})
+    public void setUp(String Browser, String URL) throws InterruptedException {
+        super.setUp(Browser,URL);
         loginPage = new LoginPage(driver1);
 
     }

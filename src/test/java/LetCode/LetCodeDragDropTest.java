@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LetCodeDragDropTest extends Driver {
@@ -13,8 +14,9 @@ public class LetCodeDragDropTest extends Driver {
     protected WebElement webElement;
 
     @BeforeClass
-    public void setUp() throws InterruptedException {
-        super.setUp();
+    @Parameters({"Browser", "URL"})
+    public void setUp(String Browser, String URL) throws InterruptedException {
+        super.setUp(Browser, URL);
         letCodeDragDropPage = new LetCodeDragDropPage();
         navigateTo("https://letcode.in/draggable");
     }
