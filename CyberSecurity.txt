@@ -25,7 +25,7 @@ sql injection example:
 What Does a Prepared Statement Do?
 A prepared statement is a secure way to execute SQL queries that include user input.
 
-✅ Why use it?
+ Why use it?
 Prevents SQL Injection
 
 Without it, a hacker can inject malicious SQL via forms (e.g., DROP TABLE).

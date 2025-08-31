@@ -71,6 +71,11 @@ public class LetCodeActions {
         return text;
     }
 
+
+    public void actionUploadFile(WebElement element, String filePath) {
+        element.sendKeys(filePath);
+    }
+
     public Select getSelect(WebElement element) {
         return new Select(element);
     }
