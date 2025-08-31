@@ -11,13 +11,19 @@ public class LetCodeFilePage {
     private By fileDownloadButton = By.id("xls");
     private By fileDownloadButtonByLinkText = By.linkText("Download Excel");
 
-    public WebElement  fileInputUpload(WebDriver driver) {
+    public WebElement fileInputUpload(WebDriver driver) {
         return driver.findElement(fileInputUpload);
     }
+
     public WebElement fileDownloadButton(WebDriver driver) {
         return driver.findElement(fileDownloadButton);
     }
+
     public WebElement fileDownloadButtonByLinkText(WebDriver driver) {
         return driver.findElement(fileDownloadButtonByLinkText);
+    }
+
+    public void UpdateFileName(String name) {
+        fileDownloadButton = By.id(name);
     }
 }
