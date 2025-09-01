@@ -15,7 +15,6 @@ public class LoginTest extends Driver {
     public void setUp(String Browser, String URL) throws InterruptedException {
         super.setUp(Browser,URL);
         loginPage = new LoginPage(driver1);
-
     }
 
     @Test(dataProvider = "formData")

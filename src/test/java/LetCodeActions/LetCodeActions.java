@@ -9,9 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class LetCodeActions {
     protected Actions action;
+    protected Alert alert;
 
     public LetCodeActions(WebDriver driver) {
         action = new Actions(driver);
@@ -23,6 +25,43 @@ public class LetCodeActions {
 
     public void actionClick(WebElement element) {
         element.click();
+    }
+
+    // Create a helper method for alerts
+    public Alert getAlert(WebDriver driver) {
+        try {
+            return driver.switchTo().alert();
+        } catch (NoAlertPresentException e) {
+            return null;
+        }
+    }
+    public void RemoveIframe(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.querySelectorAll('iframe[id^=\"aswift_\"]').forEach(e => e.remove());");
+        // Remove divs that start with "aswift_"
+        js.executeScript("document.querySelectorAll('div[id^=\"aswift_\"]').forEach(e => e.remove());");
+        js.executeScript("document.querySelectorAll('ins.adsbygoogle').forEach(e => e.remove());");
+
+    }
+    public void closeDynamicPopupIfExists(WebDriver driver) {
+        try {
+            // Switch to the iframe if it exists
+            List<WebElement> frames = driver.findElements(By.tagName("iframe"));
+            for (WebElement frame : frames) {
+                driver.switchTo().frame(frame);
+                // Try to find the close button inside
+                List<WebElement> closeButtons = driver.findElements(By.xpath("//button[contains(text(),'×') or @class='close']"));
+                if (!closeButtons.isEmpty()) {
+                    closeButtons.get(0).click();
+                    System.out.println("Popup closed.");
+                    driver.switchTo().defaultContent();
+                    return;
+                }
+                driver.switchTo().defaultContent();
+            }
+        } catch (Exception e) {
+            System.out.println("No popup found, continuing...");
+        }
     }
 
     public void actionClear(WebElement element) {
@@ -89,13 +128,18 @@ public class LetCodeActions {
 //                    .pause(Duration.ofMillis(400))
 //                    .release()
 //                    .perform();
-
         action.moveToElement(source)
                 .clickAndHold()
                 .moveByOffset(50, 30)   // try small offsets inside the container
                 .pause(Duration.ofMillis(300))
                 .release()              // VERY IMPORTANT
                 .perform();
+    }
+    public void actionScrollToElement(WebElement element, WebDriver driver) {
+        action.moveToElement(element).perform();
+    }
+    public void actionIDFrame() {
+      alert.dismiss();
     }
 }
 

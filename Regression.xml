@@ -8,8 +8,10 @@
         <parameter name="Browser" value="Chrome"/>
         <parameter name="URL" value="https://letcode.in/"/>
         <classes>
-            <class name="LetCode.LetCodeHomeTest"/>
-            <class name="LetCode.LetCodeElementTest"/>
+<!--            <class name="LetCode.LetCodeHomeTest"/>-->
+<!--            <class name="LetCode.LetCodeElementTest"/>-->
+            <class name="LetCode.LetCodeFileTest"/>
+
         </classes>
     </test>
 <!--    <test name="smoke">-->

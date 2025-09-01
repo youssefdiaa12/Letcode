@@ -13,19 +13,20 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+
 @Test(groups = {"LetCode"})
 @Listeners(TestListener.class)
 public class LetCodeAlertTest extends Driver {
     protected WebElement webElement;
     protected LetCodeAlertPage letCodeAlertPage;
-    protected LetCodeActions letCodeActions ;
+    protected LetCodeActions letCodeActions;
 
     @BeforeClass
-    @Parameters({"Browser","URL"})
-    public void setUp(String Browser,String URL) throws InterruptedException {
+    @Parameters({"Browser", "URL"})
+    public void setUp(String Browser, String URL) throws InterruptedException {
         // Initialize LetCodeAlertPage and LetCodeActions
         letCodeAlertPage = new LetCodeAlertPage();
-        super.setUp(Browser,URL);
+        super.setUp(Browser, URL);
         super.navigateTo("https://letcode.in/alert");
         // Wait for the page to load and elements to be visible
         Thread.sleep(7000);
@@ -35,7 +36,7 @@ public class LetCodeAlertTest extends Driver {
      * This test case clicks on the Confirm Alert button and verifies the alert text.
      * It also verifies that the alert is accepted.
      */
-    @Test(priority = 1, description = "Test LetCode DropDowns",groups = {"smoke"})
+    @Test(priority = 1, description = "Test LetCode DropDowns", groups = {"smoke"})
     public void TestConfirmAlert() {
         webElement = letCodeAlertPage.SimpleAlert(driver1);
         letCodeActions.actionClick(webElement);
@@ -54,8 +55,6 @@ public class LetCodeAlertTest extends Driver {
         softAssert.assertTrue(alert.getText().contains("Enter your name"), "Alert text does not match");
         alert.sendKeys("Koushik");
         alert.accept();
-
-
     }
 
     @Test(priority = 3, description = "Test LetCode Modern Alert")

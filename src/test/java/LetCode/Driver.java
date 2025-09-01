@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
@@ -18,7 +19,8 @@ import java.util.List;
 public class Driver {
     protected static WebDriver driver1;
     protected static LetCodeActions letCodeActions;
-    protected static SoftAssert softAssert;
+    protected  SoftAssert softAssert;
+    protected static WebDriverWait wait;
 
     public void setUp(String Browser, String URL) throws InterruptedException {
         // Initialize only once
@@ -33,8 +35,8 @@ public class Driver {
                 driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
             }
         }
-        softAssert = new SoftAssert();
         letCodeActions = new LetCodeActions(driver1);
+        wait = new WebDriverWait(driver1, Duration.ofSeconds(10));
     }
 
     public static WebDriver getDriver() {
@@ -54,6 +56,7 @@ public class Driver {
         if (driver1 != null) {
             driver1.quit();
         }
+
         softAssert = null;
         driver1 = null;
     }
