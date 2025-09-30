@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 @Test(groups = {"LetCode"})
-@Listeners(TestListener.class)
+//@Listeners(TestListener.class)
 public class LetCodeAlertTest extends Driver {
     protected WebElement webElement;
     protected LetCodeAlertPage letCodeAlertPage;
@@ -23,12 +23,14 @@ public class LetCodeAlertTest extends Driver {
     @BeforeClass
     @Parameters({"Browser","URL"})
     public void setUp(String Browser,String URL) throws InterruptedException {
+        System.out.println("dddd");
         // Initialize LetCodeAlertPage and LetCodeActions
         letCodeAlertPage = new LetCodeAlertPage();
         super.setUp(Browser,URL);
         super.navigateTo("https://letcode.in/alert");
         // Wait for the page to load and elements to be visible
         Thread.sleep(7000);
+
     }
 
     /**
