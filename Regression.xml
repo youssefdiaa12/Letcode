@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" thread-count="2">
-<!--    <listeners>-->
-<!--        <listener class-name="LetCode.TestListener"/>-->
-<!--    </listeners>-->
+    <listeners>
+        <listener class-name="LetCode.TestListener"/>
+    </listeners>
     <test name="regression">
         <parameter name="Browser" value="Chrome"/>
         <parameter name="URL" value="https://letcode.in/"/>
